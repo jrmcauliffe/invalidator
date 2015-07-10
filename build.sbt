@@ -8,6 +8,8 @@ scalaVersion := "2.11.7"
 
 assemblyJarName in assembly := "invalidator.zip"
 
+target in assembly := file("./")
+
 libraryDependencies ++= Seq(
   "org.specs2"                   %% "specs2-core"              % "3.4"    % "test",
   "com.amazonaws"                % "aws-lambda-java-core"      % "1.0.0",
