@@ -6,11 +6,7 @@ organization := "org.birchavenue.aws"
 
 scalaVersion := "2.11.7"
 
-proguardSettings
-
-ProguardKeys.options in Proguard ++= Seq("-dontnote", "-dontwarn", "-ignorewarnings")
-
-ProguardKeys.options in Proguard += ProguardOptions.keepMain("invalidator.main")
+assemblyJarName in assembly := "invalidator.zip"
 
 libraryDependencies ++= Seq(
   "org.specs2"                   %% "specs2-core"              % "3.4"    % "test",
