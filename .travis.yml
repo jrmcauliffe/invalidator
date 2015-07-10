@@ -1,6 +1,6 @@
 language: scala
 scala: 2.11.7
-script: sbt ++TRAVIS_SCALA_VERSION test && sbt ++TRAVIS_SCALA_VERSION assembly
+script: sbt ++$TRAVIS_SCALA_VERSION test && sbt ++$TRAVIS_SCALA_VERSION assembly
 deploy:
   provider: s3
   skip_cleanup: true
