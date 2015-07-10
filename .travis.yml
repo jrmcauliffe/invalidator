@@ -1,5 +1,6 @@
 language: scala
 scala: 2.11.7
+beforedeploy: sbt ++TRAVIS_SCALA_VERSION assembly
 deploy:
   provider: s3
   access_key_id: AKIAI47KP5TEM5GSDWBA
