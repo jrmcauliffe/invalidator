@@ -13,7 +13,7 @@ class Main {
 
   def greeting(input: InputStream, output: OutputStream): Unit = {
     val name = scalaMapper.readValue(input, classOf[NameInfo])
-    val result = s"Greetings again ${name.firstName} ${name.lastName}." 
+    val result = "Greetings again ${name.firstName} ${name.lastName}." 
     output.write(result.getBytes("UTF-8"))
   }
 }
