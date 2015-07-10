@@ -4,7 +4,8 @@ script: sbt ++$TRAVIS_SCALA_VERSION test && sbt ++$TRAVIS_SCALA_VERSION assembly
 deploy:
   provider: s3
   skip_cleanup: true
-  file: target/scala-2.11/invalidator.zip
+  file: 
+    - "target/scala-2.11/invalidator.zip"
   access_key_id: AKIAI47KP5TEM5GSDWBA
   secret_access_key:
     secure: KMU323GxNxvtcgJfsrc0wvkCWDQ/hQWfAyX3kcXnEfjvZ0PzOKYFcVFdscyVhJzWSlxfMBcsD4lOBG2qwa+7Ds4JszKRnR1K6afaJgi0qL/f30MuB4+KbgOL+wxNzZ8l4SjodOSgZh6JjEfSBCDEz5g5MwKSp+oPsvVafZv5NZpFTx2Q1453Ps8AWau/fltHSYitiQRa/nLoKwtXVGcW9wjMvkMA48pLLQfTUYHaf5nAzrCQKWypW1cQk9NC+Q3grrevHgmxflHVWmlkNHQ2nakBfqjfJxpYcHiD5y7ZpbPRPscj+9ntF5ThJ8gAkSWtGh99/A7tMvS4s3ckRq0b8Dnvfsj27n1critfzQSMWefHK9LGyZE5BnxAzaReVzcd4rtqwFUOMgSSlV9Vbm1BYwmFyidrS3jF7TfRIVkAqyV1z0oX2bcHI7VLA+BqOom0wbBq5EFSm04Bzvsj+vo6gNG70q3pTCdq/WwZRUHdyf8fPNUy9fKxn/KNbWKe/0qL2XYgU4qg1Sd67mgZvaMbBrNHa6/k26jnUPW4OzV2pLUC5/RLdu+0e9mvWOF8426veKilTnxUK7XzsGzgRntQEzf5j6FkAp5eMCwS2mHgbvH+qUszGdkRQphHCywHGgTkKGNcpxO2YOHRSD+b+CVPmN04f9KUmFR6ncrFuJ4//nw=
