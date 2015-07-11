@@ -3,6 +3,7 @@ scala: 2.11.7
 script: sbt ++$TRAVIS_SCALA_VERSION test && sbt ++$TRAVIS_SCALA_VERSION assembly
 deploy:
   provider: s3
+  skip-cleanup: true
   local-dir: "target/scala-2.11/"
   access_key_id: AKIAI47KP5TEM5GSDWBA
   secret_access_key:
