@@ -8,7 +8,7 @@ case class NameInfo(firstName: String, lastName: String)
 
 class Main {
 
-  def invalidate(event: S3Event, context: Context): Unit = {
+  def invalidate(event: S3Event, context: Context): String = {
 
     val logger = context.getLogger
 
@@ -17,5 +17,7 @@ class Main {
     val key =  record.getS3.getObject.getKey  
     
     logger.log(bucket + ":" + key)
+    
+    bucket + ":" + key
   }
 }
