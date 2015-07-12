@@ -8,16 +8,17 @@ case class NameInfo(firstName: String, lastName: String)
 
 class Main {
 
-  def invalidate(event: S3Event, context: Context): String = {
+  def invalidate(event: S3Event, context: Context): Unit = {
 
     val logger = context.getLogger
 
     val record = event.getRecords.get(0)
+    
+    // Get source bucket and key
     val bucket = record.getS3.getBucket.getName
     val key =  record.getS3.getObject.getKey  
     
-    logger.log(bucket + ":" + key)
-    
-    bucket + ":" + key
+    logger.log(bucket + ":" + key + "/n")
+
   }
 }
