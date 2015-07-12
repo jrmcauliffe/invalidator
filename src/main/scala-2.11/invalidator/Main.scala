@@ -1,19 +1,18 @@
 package invalidator;
 
+import com.amazonaws.services.s3.model._
+import com.amazonaws.services.lambda.runtime.Context
+import com.amazonaws.services.lambda.runtime.LambdaLogger
+
 case class NameInfo(firstName: String, lastName: String)
 
 class Main {
-  import java.io.{InputStream, OutputStream, PrintStream}
 
-  val scalaMapper = {
-    import com.fasterxml.jackson.databind.ObjectMapper
-    import com.fasterxml.jackson.module.scala.DefaultScalaModule
-    new ObjectMapper().registerModule(new DefaultScalaModule)
+  def invalidate(event: S3Event, context: Context): String = {
+    
+  val logger: LambdaLogger = context.getLogger 
+  logger.log("Test of Log")
+  "Out"
   }
 
-  def greeting(input: InputStream, output: OutputStream): Unit = {
-    val name = scalaMapper.readValue(input, classOf[NameInfo])
-    val result = s"Greetings again ${name.firstName} ${name.lastName}." 
-    output.write(result.getBytes("UTF-8"))
-  }
 }

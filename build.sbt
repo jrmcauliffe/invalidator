@@ -1,6 +1,6 @@
 name := "invalidator"
 
-version := "0.0.2"
+version := "0.0.3"
 
 organization := "org.birchavenue.aws"
 
@@ -12,6 +12,8 @@ libraryDependencies ++= Seq(
   "org.specs2"                   %% "specs2-core"              % "3.4"    % "test",
   "com.amazonaws"                % "aws-lambda-java-core"      % "1.0.0",
   "com.amazonaws"                % "aws-lambda-java-core"      % "1.0.0",
+  "com.amazonaws"                % "aws-java-sdk-s3"           % "1.10.4",
+
   "com.fasterxml.jackson.module" % "jackson-module-scala_2.11" % "2.5.2"
 )
 
