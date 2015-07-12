@@ -1,6 +1,6 @@
 name := "invalidator"
 
-version := "0.0.3"
+version := "0.0.4"
 
 organization := "org.birchavenue.aws"
 
@@ -10,11 +10,8 @@ target in assembly := file("target/scala-2.11/deploy/")
 
 libraryDependencies ++= Seq(
   "org.specs2"                   %% "specs2-core"              % "3.4"    % "test",
-  "com.amazonaws"                % "aws-lambda-java-core"      % "1.0.0",
-  "com.amazonaws"                % "aws-lambda-java-core"      % "1.0.0",
-  "com.amazonaws"                % "aws-java-sdk-s3"           % "1.10.4",
-
-  "com.fasterxml.jackson.module" % "jackson-module-scala_2.11" % "2.5.2"
+  "com.amazonaws"                %  "aws-lambda-java-core"      % "1.0.+",
+  "com.amazonaws"                %  "aws-lambda-java-events"    % "1.0.+"
 )
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
